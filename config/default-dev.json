@@ -1,4 +1,5 @@
 {
+  "port": 3000,
   "db": "<pouch db name to use>",
   "github": {
     "clientID": "<client id from github application>",
