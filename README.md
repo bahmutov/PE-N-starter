@@ -1,4 +1,4 @@
-PE*N + Github auth starter project
+> PE*N + Github auth starter project
 
 Based on [hackathon starter kit](https://github.com/sahat/hackathon-starter) with all extras removed
 and parts replaced for simplicity.

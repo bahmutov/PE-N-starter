@@ -12,6 +12,7 @@ passport.serializeUser(function(user, done) {
   console.log('passport.serializeUser', user.email);
   la(check.object(user), 'expected user object');
   la(check.fn(done), 'expected done callback');
+  la(check.unemptyString(user.id), 'expected user id to be a string', user);
   done(null, user.id);
 });
 
