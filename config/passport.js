@@ -1,5 +1,6 @@
 require('lazy-ass');
 var check = require('check-more-types');
+var R = require('ramda');
 
 var _ = require('lodash');
 var passport = require('passport');
@@ -9,18 +10,21 @@ var config = require('./');
 var Users = require('../models/User')();
 
 passport.serializeUser(function(user, done) {
-  console.log('passport.serializeUser', user.email);
   la(check.object(user), 'expected user object');
   la(check.fn(done), 'expected done callback');
-  la(check.unemptyString(user.id), 'expected user id to be a string', user);
-  done(null, user.id);
+  la(check.unemptyString(user.id || user.email),
+    'expected user id or email to be a string', Object.keys(user));
+  done(null, user.id || user.email);
 });
 
-passport.deserializeUser(function(id, done) {
-  console.log('passport.deserializeUser', id);
-  la(check.unemptyString(id), 'expected id', id);
+passport.deserializeUser(function (idOrEmail, done) {
+  la(check.unemptyString(idOrEmail), 'expected id or email', idOrEmail);
 
-  Users.find(id)
+  Users.find(idOrEmail)
+    .catch(function (err) {
+      return Users.find({ email: idOrEmail })
+        .then(R.head);
+    })
     .then(function (user) {
       // useful helper methods
       user.gravatar = Users.gravatar;

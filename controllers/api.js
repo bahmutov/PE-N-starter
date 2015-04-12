@@ -1,8 +1,3 @@
-var querystring = require('querystring');
-var validator = require('validator');
-var async = require('async');
-var cheerio = require('cheerio');
-var request = require('request');
 var Github = require('github-api');
 var _ = require('lodash');
 
