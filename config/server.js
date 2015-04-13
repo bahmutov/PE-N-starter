@@ -29,6 +29,7 @@ var app = express();
  * Express configuration.
  */
 app.set('port', config.get('PORT'));
+app.set('env', config.get('NODE_ENV') || 'dev');
 app.set('views', toFull('../views'));
 app.set('view engine', 'jade');
 app.use(compress());
