@@ -11,6 +11,16 @@ and parts replaced for simplicity. [Demo](http://pe-n-starter.herokuapp.com/)
 * [Node](nodejs.org) environment
 * Github login for user signon
 
+## Install and run
+
+    git clone --depth 1 https://github.com/bahmutov/PE-N-starter.git
+    cd PE-N-starter
+    npm install
+    npm run dev
+
+To have Github auth working, copy `config/default-dev.json` to `config/local-dev.json` and enter Github application
+id and secret (you can create new developer application from your [profile](https://github.com/settings/applications)).
+
 ### Utils
 
 * [nconf](https://www.npmjs.com/package/nconf) for managing environment and command line settings
