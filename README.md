@@ -18,8 +18,16 @@ and parts replaced for simplicity. [Demo](http://pe-n-starter.herokuapp.com/)
     npm install
     npm run dev
 
-To have Github auth working, copy `config/default-dev.json` to `config/local-dev.json` and enter Github application
-id and secret (you can create new developer application from your [profile](https://github.com/settings/applications)).
+## Make it your own
+
+    git remote remove origin
+    git remote add origin <your github url>
+
+To have Github auth working:
+    cp config/default-dev.json config/local-dev.json
+
+Edit `config/local-dev.json` and enter Github application id and secret 
+(you can create new developer application from your [profile](https://github.com/settings/applications)).
 For local testing set the callback from Github to your application to `http://localhost:3000/auth/github/callback`
 
 ### Utils
