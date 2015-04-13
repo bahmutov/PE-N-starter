@@ -17,14 +17,6 @@ describe('GET /login', function() {
   });
 });
 
-describe('GET /signup', function() {
-  it('should return 200 OK', function(done) {
-    request(app)
-      .get('/signup')
-      .expect(200, done);
-  });
-});
-
 describe('GET /api', function() {
   it('should return 200 OK', function(done) {
     request(app)
