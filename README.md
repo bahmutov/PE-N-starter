@@ -1,7 +1,7 @@
 > PE*N + Github auth starter project
 
 Based on [hackathon starter kit](https://github.com/sahat/hackathon-starter) with all extras removed
-and parts replaced for simplicity.
+and parts replaced for simplicity. [Demo](http://pe-n-starter.herokuapp.com/)
 
 ## Stack
 
