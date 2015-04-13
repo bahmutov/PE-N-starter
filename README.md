@@ -28,7 +28,12 @@ To have Github auth working:
 
 Edit `config/local-dev.json` and enter Github application id and secret 
 (you can create new developer application from your [profile](https://github.com/settings/applications)).
-For local testing set the callback from Github to your application to `http://localhost:3000/auth/github/callback`
+For local testing set the callback from Github to your application to `http://localhost:3000/auth/github/callback`.
+
+### DO NOT COMMIT `config/local-dev.json` to the repository!
+
+Instead add it to the `.gitignore` file (it should already be there). In production pass settings through the
+environment variables.
 
 ### Utils
 
