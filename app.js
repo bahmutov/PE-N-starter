@@ -47,7 +47,7 @@ var app = express();
 /**
  * Express configuration.
  */
-app.set('port', config.get('port'));
+app.set('port', config.get('PORT'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(compress());

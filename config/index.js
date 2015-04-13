@@ -6,7 +6,8 @@ nconf.file('local', full('local-dev.json'));
 nconf.file('default', full('default-dev.json'));
 
 nconf.defaults({
-  port: process.env.PORT || 3000
+  PORT: process.env.PORT || 3000,
+  NODE_ENV: 'development'
 });
 
 module.exports = nconf;
