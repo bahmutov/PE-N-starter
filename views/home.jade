@@ -3,6 +3,13 @@ extends layout
 block content
   h1 PE-N-starter
   p.lead PE*N + Github auth starter project
+  .row
+    .col-sm-6.col-sm-offset-3
+      pre
+        | git clone --depth=1 git@github.com:bahmutov/PE-N-starter.git
+        | cd PE-N-starter
+        | npm install
+        | npm run dev
   hr
   .row
     .col-sm-3
@@ -27,9 +34,15 @@ block content
       p io.js is a fork of Node.js that is currently under very active (compared to Node) development.
       p
         a.btn.btn-default(href='https://iojs.org/en/index.html', role='button') View details »
-    .col-sm-3
+    .col-sm-4
       h2
         i.fa.fa-github
       p I work with source code hosted on Github a lot, so the only auth integration included is theirs.
       p
         a.btn.btn-default(href='https://github.com/', role='button') View details »
+    .col-sm-4
+      h2 I need more!
+      p Take a look at the <a href="https://github.com/sahat/hackathon-starter">Hackathon starter</a> project. It includes lots of integrated APIs plus MongoDB.
+      p
+        a.btn.btn-default(href='http://hackathonstarter.herokuapp.com/', role='button') View details »
+
