@@ -1,5 +1,5 @@
 var Github = require('github-api');
-var _ = require('lodash');
+var R = require('ramda');
 
 /**
  * GET /api
@@ -16,7 +16,7 @@ exports.getApi = function(req, res) {
  * GitHub API Example.
  */
 exports.getGithub = function(req, res, next) {
-  var token = _.find(req.user.tokens, { kind: 'github' });
+  var token = R.find(R.propEq('kind', 'github'), req.user.tokens);
   var github = new Github({ token: token.accessToken });
   var repo = github.getRepo('sahat', 'requirejs-library');
   repo.show(function(err, repo) {

@@ -1,8 +1,6 @@
 require('lazy-ass');
 var check = require('check-more-types');
 var R = require('ramda');
-
-var _ = require('lodash');
 var passport = require('passport');
 var GitHubStrategy = require('passport-github').Strategy;
 
@@ -138,7 +136,7 @@ exports.isAuthenticated = function(req, res, next) {
 exports.isAuthorized = function(req, res, next) {
   var provider = req.path.split('/').slice(-1)[0];
 
-  if (_.find(req.user.tokens, { kind: provider })) {
+  if (R.find(R.propEq('kind', provider), req.user.tokens)) {
     next();
   } else {
     res.redirect('/auth/' + provider);
