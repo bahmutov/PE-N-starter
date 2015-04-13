@@ -21,3 +21,4 @@ node_modules
 Thumbs.db
 test-pouch/
 config/local-dev.json
+sessions/

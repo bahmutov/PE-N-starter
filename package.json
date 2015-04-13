@@ -1,6 +1,6 @@
 {
   "name": "pe-n-starter",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "PE*N + Github auth starter project",
   "repository": {
     "type": "git",
@@ -45,6 +45,7 @@
     "pouchdb": "3.4.0",
     "ramda": "0.13.0",
     "request": "^2.55.0",
+    "session-file-store": "0.0.3",
     "store.pouchdb": "0.1.3"
   },
   "devDependencies": {
@@ -56,5 +57,7 @@
     "pre-git": "0.2.1",
     "supertest": "^0.15.0"
   },
-  "pre-commit": ["npm version"]
+  "pre-commit": [
+    "npm version"
+  ]
 }

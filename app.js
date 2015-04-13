@@ -17,6 +17,7 @@ var express = require('express');
 var cookieParser = require('cookie-parser');
 var compress = require('compression');
 var session = require('express-session');
+var FileStore = require('session-file-store')(session);
 var bodyParser = require('body-parser');
 var logger = require('morgan');
 var errorHandler = require('errorhandler');
@@ -63,8 +64,8 @@ app.use(cookieParser());
 app.use(session({
   resave: true,
   saveUninitialized: true,
-  secret: config.get('sessionSecret')/*,
-  store: new MongoStore({ url: secrets.db, autoReconnect: true })*/
+  secret: config.get('sessionSecret'),
+  store: new FileStore()
 }));
 app.use(passport.initialize());
 app.use(passport.session());
