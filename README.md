@@ -20,7 +20,9 @@ and parts replaced for simplicity. [Demo](http://pe-n-starter.herokuapp.com/)
 
 ## Make it your own
 
-    git remote remove origin
+    rm -rf .git
+    git init
+    git add ...
     git remote add origin <your github url>
 
 To have Github auth working:
