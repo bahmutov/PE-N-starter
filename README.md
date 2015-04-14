@@ -37,6 +37,11 @@ For local testing set the callback from Github to your application to `http://lo
 Instead add it to the `.gitignore` file (it should already be there). In production pass settings through the
 environment variables.
 
+### Client-side
+
+There is no client-side JS framework, but there are placeholders for both 3rd party (mvc) and 
+page-specific application code in `views/layout.jade` and `views/home.jade` templates.
+
 ### Utils
 
 * [nconf](https://www.npmjs.com/package/nconf) for managing environment and command line settings

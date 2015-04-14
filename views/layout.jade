@@ -11,4 +11,9 @@ html
 
     include partials/footer
 
+    != js('vendor')
     != js('application')
+
+    block mvc
+
+    block pageCode
